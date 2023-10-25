@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static com.yglong.plugin.intellij.constants.Constants.DOCX;
+import static com.yglong.plugin.intellij.constants.Constants.OFFICE_OPEN_XMLS;
 
 /**
  * @author longyg
@@ -63,7 +63,12 @@ public class DocxFileSystem extends ArchiveFileSystem {
 
     @Override
     protected boolean isCorrectFileType(@NotNull VirtualFile local) {
-        return local.getName().endsWith(DOCX);
+        for (String suffix : OFFICE_OPEN_XMLS) {
+            if (local.getName().endsWith(suffix)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

@@ -9,6 +9,6 @@ import javax.swing.*;
  */
 public interface DocBrowserIcons {
 
-    Icon TOOL_WINDOW_ICON = IconLoader.getIcon("/images/tool_13x13.svg", DocBrowserIcons.class);
+    Icon TOOL_WINDOW_ICON = IconLoader.getIcon("/images/docx_13x13.svg", DocBrowserIcons.class);
 
 }

@@ -14,8 +14,6 @@ import java.nio.file.Files;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.yglong.plugin.intellij.constants.Constants.DOCX;
-
 /**
  * Docx file handler, provide implementations for a certain docx file's operations:
  * <p>
@@ -108,7 +106,7 @@ public class DocFileHandler {
 
     private File createTempDocxFile() {
         try {
-            File file = File.createTempFile(docFile.getName(), DOCX);
+            File file = File.createTempFile(docFile.getName(),"."+ docFile.getExtension());
             FileUtils.forceDeleteOnExit(file);
             return file;
         } catch (Exception e) {

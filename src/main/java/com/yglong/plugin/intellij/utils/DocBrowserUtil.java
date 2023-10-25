@@ -6,7 +6,6 @@ import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.application.TransactionGuard;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.ActionCallback;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -24,7 +23,7 @@ import java.util.function.Consumer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import static com.yglong.plugin.intellij.constants.Constants.DOCX;
+import static com.yglong.plugin.intellij.constants.Constants.OFFICE_OPEN_XMLS;
 
 /**
  * @author longyg
@@ -79,7 +78,15 @@ public class DocBrowserUtil {
     }
 
     public static boolean isDocxFile(VirtualFile virtualFile) {
-        return null != virtualFile && !virtualFile.isDirectory() && virtualFile.getName().endsWith(DOCX);
+
+        if (null != virtualFile && !virtualFile.isDirectory()) {
+            for (String suffix : OFFICE_OPEN_XMLS) {
+                if (virtualFile.getName().endsWith(suffix)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public static void zip(File zipFile, File srcFile, String dir) {

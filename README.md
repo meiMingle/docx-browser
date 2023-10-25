@@ -1,4 +1,4 @@
-# Docx Browser
+# OOXML Browser
 
 ![Build](https://github.com/longyg/docx-browser/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/21616-docx-browser.svg)](https://plugins.jetbrains.com/plugin/21616-docx-browser)

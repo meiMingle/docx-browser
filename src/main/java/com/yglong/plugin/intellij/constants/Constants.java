@@ -4,5 +4,5 @@ package com.yglong.plugin.intellij.constants;
  * @author longyg
  */
 public interface Constants {
-    String DOCX = ".docx";
+    String[] OFFICE_OPEN_XMLS = {".docx",".xlsx",".pptx"};
 }

@@ -1,20 +1,21 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.yglong.plugin.intellij.DocxBrowser</id>
-    <name>Docx Browser</name>
+    <name>OOXML Browser</name>
     <version>1.0.0</version>
     <vendor email="longyg1986@163.com" url="https://www.yglong.com">Yonggang Long</vendor>
 
     <description>
         <![CDATA[
-          <h3>Docx Browser</h3>
-          <p> This plugin provide features to browse the xml file content inside a Word document. Note that currently only the Word file with .docx extension is supported.</p>
+          <h3>OOXML Browser</h3>
+          <p> This plugin provide features to browse the xml file content inside the Word/Excel/PPT document. Note that currently only the document file with .docx/.xlsx/.pptx extension is supported.</p>
           <p> You can edit the xml file content, then preview the modified Word document. Finally, you can save modified content to original Word document.</p>
         ]]>
     </description>
 
     <change-notes>
         <![CDATA[
+
         <li>v1.0.0: first version</li>
         ]]>
     </change-notes>
@@ -24,6 +25,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
+        <fileType name="XML" extensions="rels;"/>
         <postStartupActivity implementation="com.yglong.plugin.intellij.DocBrowserStartupActivity" order="first"/>
 
         <projectService id="docxbrowser.DocBrowserToolWindowService"
@@ -36,7 +38,7 @@
 
         <virtualFileSystem
                 implementationClass="com.yglong.plugin.intellij.file.DocxFileSystem"
-                key="docx"/>
+                key="ooxml"/>
 
         <notificationGroup displayType="BALLOON" id="Docx Browser"/>
     </extensions>
