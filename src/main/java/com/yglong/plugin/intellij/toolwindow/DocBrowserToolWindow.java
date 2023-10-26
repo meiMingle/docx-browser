@@ -7,10 +7,14 @@ import com.intellij.ui.JBSplitter;
 import com.yglong.plugin.intellij.DocBrowserPlugin;
 import com.yglong.plugin.intellij.handler.DocFileHandler;
 import com.yglong.plugin.intellij.utils.DocBrowserUtil;
+import icons.OOXMLBrowserIcons;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
+
+import static icons.OOXMLBrowserIcons.*;
 
 /**
  * @author longyg

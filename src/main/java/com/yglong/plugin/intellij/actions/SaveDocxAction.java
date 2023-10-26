@@ -22,8 +22,8 @@ public class SaveDocxAction extends AnAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         DocBrowserToolWindowService.getInstance(e.getProject()).saveChangesToDocxFile();
-        Notification notification = new Notification("Docx Browser", "Docx saved",
-                "The docx file with all changes saved successfully", NotificationType.INFORMATION);
+        Notification notification = new Notification("OOXML Browser", "OOXML file saved",
+                "The ooxml file with all changes saved successfully", NotificationType.INFORMATION);
         Notifications.Bus.notify(notification);
     }
 }

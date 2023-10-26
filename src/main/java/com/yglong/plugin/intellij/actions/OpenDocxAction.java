@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 public class OpenDocxAction extends DumbAwareAction {
 
     public OpenDocxAction() {
-        getTemplatePresentation().setText("Open In Word");
+        getTemplatePresentation().setText("Open In Office");
         getTemplatePresentation().setIcon(AllIcons.Actions.Preview);
     }
 

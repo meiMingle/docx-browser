@@ -33,14 +33,14 @@
                         serviceImplementation="com.yglong.plugin.intellij.service.impl.DocBrowserToolWindowServiceImpl"/>
 
         <toolWindow factoryClass="com.yglong.plugin.intellij.toolwindow.DocBrowserToolWindowFactory"
-                    id="Docx Browser" secondary="true" icon="DocBrowserIcons.TOOL_WINDOW_ICON"
+                    id="OOXML Browser" secondary="true" icon="OOXMLBrowserIcons.TOOL_WINDOW_ICON_OFFICE"
                     order="last" anchor="right"/>
 
         <virtualFileSystem
                 implementationClass="com.yglong.plugin.intellij.file.DocxFileSystem"
                 key="ooxml"/>
 
-        <notificationGroup displayType="BALLOON" id="Docx Browser"/>
+        <notificationGroup displayType="BALLOON" id="OOXML Browser"/>
     </extensions>
 
     <applicationListeners>

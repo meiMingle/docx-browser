@@ -132,7 +132,7 @@ public class DocBrowserTree extends JBScrollPane {
 
     public void updateTreeWithNonDocx() {
         removeTreeListeners();
-        ((DefaultTreeModel) tree.getModel()).setRoot(new TreeNode<>("No docx file selected"));
+        ((DefaultTreeModel) tree.getModel()).setRoot(new TreeNode<>("No OOXML file selected"));
     }
 
     public void updateTree(DocFileHandler fileHandler) {
